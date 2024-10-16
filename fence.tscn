@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bn6m5uvac73s5" path="res://fence.png" id="1_jgyq0"]
 
-[node name="fence" type="Sprite2D"]
+[node name="fence" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
 scale = Vector2(0.01, 0.01)
 texture = ExtResource("1_jgyq0")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bs6h64visbjlo" path="res://running_man.png" id="1_xqurm"]
 
-[sub_resource type="Animation" id="Animation_iygjo"]
+[sub_resource type="Animation" id="Animation_i5qa8"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_vkuuu"]
+[sub_resource type="Animation" id="Animation_g2145"]
 resource_name = "run"
 loop_mode = 1
 tracks/0/type = "value"
@@ -33,15 +33,16 @@ tracks/0/keys = {
 "values": [0, 29]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_knity"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xtbrk"]
 _data = {
-"RESET": SubResource("Animation_iygjo"),
-"run": SubResource("Animation_vkuuu")
+"RESET": SubResource("Animation_i5qa8"),
+"run": SubResource("Animation_g2145")
 }
 
 [node name="character" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -14)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_xqurm")
 hframes = 6
@@ -49,5 +50,5 @@ vframes = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_knity")
+"": SubResource("AnimationLibrary_xtbrk")
 }
