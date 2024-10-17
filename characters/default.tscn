@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjmwbrhy0arpq"]
+[gd_scene load_steps=6 format=3 uid="uid://bjmwbrhy0arpq"]
 
 [ext_resource type="Texture2D" uid="uid://bs6h64visbjlo" path="res://running_man.png" id="1_xqurm"]
 
@@ -15,6 +15,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -14)]
 }
 
 [sub_resource type="Animation" id="Animation_g2145"]
@@ -33,9 +45,38 @@ tracks/0/keys = {
 "values": [0, 29]
 }
 
+[sub_resource type="Animation" id="Animation_6pbwu"]
+resource_name = "jump"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [20, 29]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 0.594603, 1),
+"update": 0,
+"values": [Vector2(0, -14), Vector2(0, -28), Vector2(0, -14)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xtbrk"]
 _data = {
 "RESET": SubResource("Animation_i5qa8"),
+"jump": SubResource("Animation_6pbwu"),
 "run": SubResource("Animation_g2145")
 }
 

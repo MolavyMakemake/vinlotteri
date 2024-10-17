@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbgbndq5ev0ig"]
 
-[ext_resource type="Texture2D" uid="uid://bn6m5uvac73s5" path="res://fence.png" id="1_jgyq0"]
+[ext_resource type="Texture2D" uid="uid://tmo0dxg6xsv0" path="res://sprites/fence.png" id="1_by5w4"]
 
 [node name="fence" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -4)
-scale = Vector2(0.01, 0.01)
-texture = ExtResource("1_jgyq0")
+texture_filter = 1
+position = Vector2(8, -8)
+texture = ExtResource("1_by5w4")

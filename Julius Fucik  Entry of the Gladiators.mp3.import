@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bp8pnpkrffbe1"
+path="res://.godot/imported/Julius Fucik  Entry of the Gladiators.mp3-c533ff359d726b935747beb02b32a47a.mp3str"
+
+[deps]
+
+source_file="res://Julius Fucik  Entry of the Gladiators.mp3"
+dest_files=["res://.godot/imported/Julius Fucik  Entry of the Gladiators.mp3-c533ff359d726b935747beb02b32a47a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
