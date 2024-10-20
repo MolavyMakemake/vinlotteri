@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://6ryccl7djtks"]
+[gd_scene load_steps=22 format=3 uid="uid://6ryccl7djtks"]
 
 [ext_resource type="Script" path="res://gamelogic.gd" id="1_q151k"]
 [ext_resource type="PackedScene" uid="uid://bhqiuhh2r2shi" path="res://characters/daisy.tscn" id="2_kn77m"]
@@ -9,11 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://c1wd0sa1dwas4" path="res://characters/luigi.tscn" id="4_vdlg2"]
 [ext_resource type="Texture2D" uid="uid://dkdhodk701ota" path="res://sky-ls 2.jpg" id="5_grnde"]
 [ext_resource type="PackedScene" uid="uid://c607366x0ljmp" path="res://characters/waluigi.tscn" id="6_14r3h"]
+[ext_resource type="PackedScene" uid="uid://4acujdlhuqua" path="res://characters/horse.tscn" id="6_cdx1q"]
 [ext_resource type="Texture2D" uid="uid://dtckfw3w2kjfk" path="res://grass.png" id="6_otjcj"]
 [ext_resource type="PackedScene" uid="uid://df7mplpmbxa2x" path="res://characters/wario.tscn" id="7_fwvcs"]
 [ext_resource type="PackedScene" uid="uid://q6nahjpta6r7" path="res://characters/peach.tscn" id="7_mn6o3"]
 [ext_resource type="PackedScene" uid="uid://df7rfjppxy0s2" path="res://characters/toad.tscn" id="8_qeiat"]
+[ext_resource type="PackedScene" uid="uid://b84shi37td0oc" path="res://characters/sonic.tscn" id="9_3cx6b"]
 [ext_resource type="PackedScene" uid="uid://cwkaj7wkt2ppw" path="res://characters/toadette.tscn" id="9_bcrbd"]
+[ext_resource type="PackedScene" uid="uid://tg0l7foersb4" path="res://characters/racecar.tscn" id="10_h12vj"]
 [ext_resource type="PackedScene" uid="uid://dnbvqqdv07i25" path="res://characters/family-guy.tscn" id="10_l0k4s"]
 [ext_resource type="AudioStream" uid="uid://bp8pnpkrffbe1" path="res://Julius Fucik  Entry of the Gladiators.mp3" id="16_rk08a"]
 
@@ -32,16 +35,17 @@ move_probability = SubResource("Curve_nciwy")
 jump_probability = SubResource("Curve_ptcs1")
 tracks = [-24, -12, 0, 12, 24, 36, 48, 60]
 track_layout = [400, 0, 1000, 6, 400, 0]
-keys = ["family-guy", "mario", "luigi", "wario", "waluigi", "peach", "daisy", "toad"]
+keys = ["racecar", "wario", "toadette", "default", "family-guy", "daisy", "peach"]
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [PackedStringArray("daisy", "default", "family-guy", "fence", "luigi", "mario", "peach", "toad", "toadette", "waluigi", "wario"), [ExtResource("2_kn77m"), ExtResource("3_ydioc"), ExtResource("10_l0k4s"), ExtResource("4_ooeq1"), ExtResource("4_vdlg2"), ExtResource("4_hxc1r"), ExtResource("7_mn6o3"), ExtResource("8_qeiat"), ExtResource("9_bcrbd"), ExtResource("6_14r3h"), ExtResource("7_fwvcs")]]
+resources = [PackedStringArray("daisy", "default", "family-guy", "fence", "horse", "luigi", "mario", "peach", "racecar", "sonic", "toad", "toadette", "waluigi", "wario"), [ExtResource("2_kn77m"), ExtResource("3_ydioc"), ExtResource("10_l0k4s"), ExtResource("4_ooeq1"), ExtResource("6_cdx1q"), ExtResource("4_vdlg2"), ExtResource("4_hxc1r"), ExtResource("7_mn6o3"), ExtResource("10_h12vj"), ExtResource("9_3cx6b"), ExtResource("8_qeiat"), ExtResource("9_bcrbd"), ExtResource("6_14r3h"), ExtResource("7_fwvcs")]]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(60, -45)
-zoom = Vector2(3, 3)
+position = Vector2(60, -40)
+zoom = Vector2(4.8, 4.8)
 
 [node name="background" type="Node2D" parent="Camera2D"]
+position = Vector2(0, -5)
 
 [node name="sky" type="Sprite2D" parent="Camera2D/background"]
 z_index = -1
