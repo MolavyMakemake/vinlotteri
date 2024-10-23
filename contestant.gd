@@ -21,7 +21,7 @@ func ready():
 	animation.play("run")
 
 func jump(_success: bool):
-	if false and _success:
+	if _success:
 		animation.play("jump")
 	else:
 		timeout = 1

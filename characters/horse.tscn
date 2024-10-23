@@ -1,12 +1,109 @@
-[gd_scene load_steps=2 format=3 uid="uid://4acujdlhuqua"]
+[gd_scene load_steps=6 format=3 uid="uid://cuhdjlygdo7vj"]
 
-[ext_resource type="Texture2D" uid="uid://dsadt6kyf83y0" path="res://sprites/horse-temp.png" id="1_8qvl4"]
+[ext_resource type="Texture2D" uid="uid://csief8jxycove" path="res://sprites/horse-sheet.png" id="1_g1ujb"]
+
+[sub_resource type="Animation" id="Animation_2sg88"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(6, 31, 103, 63)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bdswm"]
+resource_name = "jump"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Rect2(673, 15, 98, 74), Rect2(790, 19, 113, 49), Rect2(914, 32, 100, 64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, -10), Vector2(0, -25), Vector2(5, -15), Vector2(5, -5)]
+}
+
+[sub_resource type="Animation" id="Animation_fqyo2"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(6, 31, 103, 63), Rect2(120, 32, 102, 62), Rect2(233, 32, 94, 61), Rect2(336, 33, 101, 63), Rect2(449, 32, 100, 62), Rect2(561, 31, 103, 57)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(2, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sovj5"]
+_data = {
+"RESET": SubResource("Animation_2sg88"),
+"jump": SubResource("Animation_bdswm"),
+"run": SubResource("Animation_fqyo2")
+}
 
 [node name="Horse" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-10, -6)
-scale = Vector2(0.01, 0.01)
-texture = ExtResource("1_8qvl4")
+texture_filter = 1
+position = Vector2(-10, -12)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_g1ujb")
+region_enabled = true
+region_rect = Rect2(6, 31, 103, 63)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sovj5")
+}

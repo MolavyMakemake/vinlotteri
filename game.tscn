@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://6ryccl7djtks"]
+[gd_scene load_steps=24 format=3 uid="uid://6ryccl7djtks"]
 
 [ext_resource type="Script" path="res://gamelogic.gd" id="1_q151k"]
 [ext_resource type="PackedScene" uid="uid://befxrhqsdkbs5" path="res://characters/Ole-Markus.tscn" id="2_cr7b1"]
@@ -14,9 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://dtckfw3w2kjfk" path="res://grass.png" id="6_otjcj"]
 [ext_resource type="PackedScene" uid="uid://df7mplpmbxa2x" path="res://characters/wario.tscn" id="7_fwvcs"]
 [ext_resource type="PackedScene" uid="uid://q6nahjpta6r7" path="res://characters/peach.tscn" id="7_mn6o3"]
+[ext_resource type="PackedScene" uid="uid://cuhdjlygdo7vj" path="res://characters/horse.tscn" id="8_2kviy"]
 [ext_resource type="PackedScene" uid="uid://df7rfjppxy0s2" path="res://characters/toad.tscn" id="8_qeiat"]
 [ext_resource type="PackedScene" uid="uid://cwkaj7wkt2ppw" path="res://characters/toadette.tscn" id="9_bcrbd"]
 [ext_resource type="PackedScene" uid="uid://dnbvqqdv07i25" path="res://characters/family-guy.tscn" id="10_l0k4s"]
+[ext_resource type="PackedScene" uid="uid://b0ecglwsutyl" path="res://characters/sonic.tscn" id="12_kbijc"]
 [ext_resource type="PackedScene" uid="uid://bg5lvaue2saaa" path="res://characters/zelda.tscn" id="15_6fah6"]
 [ext_resource type="AudioStream" uid="uid://bp8pnpkrffbe1" path="res://Julius Fucik  Entry of the Gladiators.mp3" id="16_rk08a"]
 
@@ -35,10 +37,10 @@ move_probability = SubResource("Curve_nciwy")
 jump_probability = SubResource("Curve_ptcs1")
 tracks = [-24, -12, 0, 12, 24, 36, 48, 60]
 track_layout = [400, 0, 1000, 6, 400, 0]
-keys = ["Ole-Markus", "zelda", "luigi", "wario", "waluigi", "charizard", "daisy", "toad"]
+keys = ["Ole-Markus", "sonic", "Ole-Markus", "Ole-Markus", "Ole-Markus", "Ole-Markus", "Ole-Markus", "Ole-Markus"]
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [PackedStringArray("Ole-Markus", "charizard", "daisy", "default", "family-guy", "fence", "luigi", "mario", "peach", "toad", "toadette", "waluigi", "wario", "zelda"), [ExtResource("2_cr7b1"), ExtResource("3_yjipt"), ExtResource("2_kn77m"), ExtResource("3_ydioc"), ExtResource("10_l0k4s"), ExtResource("4_ooeq1"), ExtResource("4_vdlg2"), ExtResource("4_hxc1r"), ExtResource("7_mn6o3"), ExtResource("8_qeiat"), ExtResource("9_bcrbd"), ExtResource("6_14r3h"), ExtResource("7_fwvcs"), ExtResource("15_6fah6")]]
+resources = [PackedStringArray("Ole-Markus", "charizard", "daisy", "default", "family-guy", "fence", "horse", "luigi", "mario", "peach", "sonic", "toad", "toadette", "waluigi", "wario", "zelda"), [ExtResource("2_cr7b1"), ExtResource("3_yjipt"), ExtResource("2_kn77m"), ExtResource("3_ydioc"), ExtResource("10_l0k4s"), ExtResource("4_ooeq1"), ExtResource("8_2kviy"), ExtResource("4_vdlg2"), ExtResource("4_hxc1r"), ExtResource("7_mn6o3"), ExtResource("12_kbijc"), ExtResource("8_qeiat"), ExtResource("9_bcrbd"), ExtResource("6_14r3h"), ExtResource("7_fwvcs"), ExtResource("15_6fah6")]]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(60, -45)
