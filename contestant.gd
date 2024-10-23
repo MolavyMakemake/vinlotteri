@@ -11,6 +11,7 @@ var active: bool = false
 func initiate(_instance: Node2D):
 	instance = _instance
 	animation = _instance.get_node("AnimationPlayer")
+	animation.play("prepare")
 
 	position = 0
 	timeout = -1
@@ -20,7 +21,7 @@ func ready():
 	animation.play("run")
 
 func jump(_success: bool):
-	if _success:
+	if false and _success:
 		animation.play("jump")
 	else:
 		timeout = 1

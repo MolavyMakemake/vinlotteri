@@ -1,9 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://6ryccl7djtks"]
+[gd_scene load_steps=22 format=3 uid="uid://6ryccl7djtks"]
 
 [ext_resource type="Script" path="res://gamelogic.gd" id="1_q151k"]
+[ext_resource type="PackedScene" uid="uid://befxrhqsdkbs5" path="res://characters/Ole-Markus.tscn" id="2_cr7b1"]
 [ext_resource type="PackedScene" uid="uid://bhqiuhh2r2shi" path="res://characters/daisy.tscn" id="2_kn77m"]
 [ext_resource type="Texture2D" uid="uid://cumc66rf78cg7" path="res://track.png" id="3_wnvsi"]
 [ext_resource type="PackedScene" uid="uid://bjmwbrhy0arpq" path="res://characters/default.tscn" id="3_ydioc"]
+[ext_resource type="PackedScene" uid="uid://bgf5nupepgj67" path="res://characters/charizard.tscn" id="3_yjipt"]
 [ext_resource type="PackedScene" uid="uid://bmqe5pxwlo58j" path="res://characters/mario.tscn" id="4_hxc1r"]
 [ext_resource type="PackedScene" uid="uid://dbgbndq5ev0ig" path="res://fence.tscn" id="4_ooeq1"]
 [ext_resource type="PackedScene" uid="uid://c1wd0sa1dwas4" path="res://characters/luigi.tscn" id="4_vdlg2"]
@@ -15,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://df7rfjppxy0s2" path="res://characters/toad.tscn" id="8_qeiat"]
 [ext_resource type="PackedScene" uid="uid://cwkaj7wkt2ppw" path="res://characters/toadette.tscn" id="9_bcrbd"]
 [ext_resource type="PackedScene" uid="uid://dnbvqqdv07i25" path="res://characters/family-guy.tscn" id="10_l0k4s"]
+[ext_resource type="PackedScene" uid="uid://bg5lvaue2saaa" path="res://characters/zelda.tscn" id="15_6fah6"]
 [ext_resource type="AudioStream" uid="uid://bp8pnpkrffbe1" path="res://Julius Fucik  Entry of the Gladiators.mp3" id="16_rk08a"]
 
 [sub_resource type="Curve" id="Curve_nciwy"]
@@ -32,10 +35,10 @@ move_probability = SubResource("Curve_nciwy")
 jump_probability = SubResource("Curve_ptcs1")
 tracks = [-24, -12, 0, 12, 24, 36, 48, 60]
 track_layout = [400, 0, 1000, 6, 400, 0]
-keys = ["family-guy", "mario", "luigi", "wario", "waluigi", "peach", "daisy", "toad"]
+keys = ["Ole-Markus", "zelda", "luigi", "wario", "waluigi", "charizard", "daisy", "toad"]
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [PackedStringArray("daisy", "default", "family-guy", "fence", "luigi", "mario", "peach", "toad", "toadette", "waluigi", "wario"), [ExtResource("2_kn77m"), ExtResource("3_ydioc"), ExtResource("10_l0k4s"), ExtResource("4_ooeq1"), ExtResource("4_vdlg2"), ExtResource("4_hxc1r"), ExtResource("7_mn6o3"), ExtResource("8_qeiat"), ExtResource("9_bcrbd"), ExtResource("6_14r3h"), ExtResource("7_fwvcs")]]
+resources = [PackedStringArray("Ole-Markus", "charizard", "daisy", "default", "family-guy", "fence", "luigi", "mario", "peach", "toad", "toadette", "waluigi", "wario", "zelda"), [ExtResource("2_cr7b1"), ExtResource("3_yjipt"), ExtResource("2_kn77m"), ExtResource("3_ydioc"), ExtResource("10_l0k4s"), ExtResource("4_ooeq1"), ExtResource("4_vdlg2"), ExtResource("4_hxc1r"), ExtResource("7_mn6o3"), ExtResource("8_qeiat"), ExtResource("9_bcrbd"), ExtResource("6_14r3h"), ExtResource("7_fwvcs"), ExtResource("15_6fah6")]]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(60, -45)
@@ -112,4 +115,3 @@ text = "1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_rk08a")
 volume_db = -4.379
-autoplay = true
